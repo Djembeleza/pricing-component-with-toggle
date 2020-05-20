@@ -1,0 +1,10 @@
+:root {
+    --mobile-width: 375px,
+    --desktop-width: 1440px,
+    --very-light-grayish-blue: hsl(240, 78%, 98%),
+    --light-grayish-blue: hsl(234, 14%, 74%),
+    --grayish-blue: hsl(233, 13%, 49%),
+    --dark-grayish-blue: hsl(232, 13%, 33%),
+    --body-font-size: 15px,
+    --body-font-weight: 700
+}
