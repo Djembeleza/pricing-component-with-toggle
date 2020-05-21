@@ -1,10 +1,156 @@
+*, *::before, *::after  {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
 :root {
-    --mobile-width: 375px,
-    --desktop-width: 1440px,
-    --very-light-grayish-blue: hsl(240, 78%, 98%),
-    --light-grayish-blue: hsl(234, 14%, 74%),
-    --grayish-blue: hsl(233, 13%, 49%),
-    --dark-grayish-blue: hsl(232, 13%, 33%),
-    --body-font-size: 15px,
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+    --body-font-size: 15px;
     --body-font-weight: 700
 }
+
+
+ body {
+    font-family: 'Montserrat';
+    font-weight: var(--body-font-weight);
+    font-size: var(--body-font-size);
+    text-align: center;
+}
+
+p {margin-top: 10px;}
+
+
+hr {
+    width: 80vw;
+    margin-left: 5vw;
+    margin-top: 2vh;
+}
+h2, .option-section {
+    margin-top: 2vh;
+}
+
+.option-section {
+    margin-bottom: 2vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('/images/bg-top.svg') right top no-repeat, url('/images/bg-bottom.svg') bottom no-repeat;
+}
+
+.card {
+    width: 88vw;
+    border-radius: 10px;
+    margin: 2vw 0;
+    background-color: var(--very-light-grayish-blue);
+}
+
+.card-coloured {
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+}
+
+.mb {
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 15px 32px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 88%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.btn-default {
+    background-image: linear-gradient(90deg,hsl(236, 72%, 79%), hsl(237, 63%,64%));
+}
+
+.btn-light {
+    background-color: white;
+    color: #000;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 8px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,var(--grayish-blue), var(--dark-grayish-blue));
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+      
+    background: linear-gradient(90deg,var(--grayish-blue), var(--dark-grayish-blue));
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+    background-color: yellowgreen;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
