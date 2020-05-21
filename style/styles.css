@@ -8,7 +8,6 @@
 
 :root {
     --mobile-width: 375px;
-    --desktop-width: 1440px;
     --very-light-grayish-blue: hsl(240, 78%, 98%);
     --light-grayish-blue: hsl(234, 14%, 74%);
     --grayish-blue: hsl(233, 13%, 49%);
@@ -29,10 +28,15 @@ p {margin-top: 10px;}
 
 
 hr {
-    width: 80vw;
-    margin-left: 5vw;
+    width: 80%;
+    margin-left: 10%;
     margin-top: 2vh;
 }
+
+.card-coloured hr {
+color: white;
+}
+
 h2, .option-section {
     margin-top: 2vh;
 }
@@ -76,11 +80,29 @@ h2, .option-section {
 
 .btn-default {
     background-image: linear-gradient(90deg,hsl(236, 72%, 79%), hsl(237, 63%,64%));
+    color: white;
+}
+
+.btn-default:focus, .btn-default:hover {
+  background-image: none;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.btn-default:hover, .btn-light:hover {
+  cursor: pointer;
 }
 
 .btn-light {
     background-color: white;
     color: #000;
+}
+
+.btn-light:hover {
+  border: 1px solid white;
+  background-image: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
 }
 
 .price {
@@ -153,4 +175,25 @@ h2, .option-section {
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .card-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .card {
+      width: 20vw;
+      margin: 3vh 1.2vw;
+    }
+
+    .card-coloured {
+     scale: 1.05;
+    }
+
+
   }
