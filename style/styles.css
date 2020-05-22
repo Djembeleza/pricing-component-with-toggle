@@ -58,6 +58,7 @@ h2, .option-section {
     border-radius: 10px;
     margin: 2vw 0;
     background-color: var(--very-light-grayish-blue);
+    padding: 10px;
 }
 
 .card-coloured {
@@ -175,6 +176,10 @@ h2, .option-section {
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .monthly {
+    display: none;
   }
 
   @media only screen and (min-width: 1440px) {
